@@ -7,7 +7,7 @@ RM="/bin/rm"
 MV="/bin/mv"
 
 github_base='https://raw.githubusercontent.com/'
-repo_path='PeterDaveHello/Unitial/master/'
+repo_path='HarrisQs/Unitial/master/'
 
 os=`uname`
 if [ $os = "FreeBSD" ];then
