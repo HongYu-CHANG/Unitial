@@ -34,7 +34,7 @@ Installation
 Install by this one line command:
 
 ```sh
-curl -L -o- https://goo.gl/FGs2Fu | bash
+curl -L -o- https://goo.gl/a1Iu1v | bash
 ```
 
 PS : If you are using FreeBSD, please use "fetch" instead of "curl", in case that you don't have curl to use
