@@ -122,6 +122,13 @@ function returncode
     fi
 }
 
+function parse_git_branch() {
+ local b="$(git symbolic-ref HEAD 2>/dev/null)";
+    if [ -n "$b" ]; then
+        printf " (%s)" "${b##refs/heads/}";
+    fi
+}
+
 [[ -z ${match_lhs}    ]] \
         && type -P dircolors >/dev/null \
         && match_lhs=$(dircolors --print-database)
@@ -129,9 +136,9 @@ function returncode
 
 if ${use_color} ; then
     if [[ ${EUID} == 0 ]] ; then
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;36m\] \w \$\[\033[00m\] \[\033[01;31m\]$(returncode)\[\033[0;37m\]'
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\d \[\033[1;35m\]\A \[\033[01;33m\]\u \[\033[01;37m\]@ \[\033[01;31m\]\h \[\033[01;32m\] \w \$\[\033[01;33m\]$(parse_git_branch)\[\033[01;31m\]$(returncode)\[\033[00;37m\] '
     else
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;36m\] \w \$\[\033[00m\] \[\033[01;31m\]$(returncode)\[\033[0;37m\]'
+       PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\d \[\033[1;35m\]\A \[\033[01;33m\]\u \[\033[01;37m\]@ \[\033[01;31m\]\h \[\033[01;32m\] \w \$\[\033[01;33m\]$(parse_git_branch)\[\033[01;31m\]$(returncode)\[\033[00;37m\] '
     fi
 else
     if [[ ${EUID} == 0 ]] ; then
