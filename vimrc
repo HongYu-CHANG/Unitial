@@ -7,7 +7,7 @@ set fileencodings=utf-8,big5,gb2312,gb18030,gbk,default
 
 " enable features which are not Vi compatible but really really nice.
 set nocompatible  "nocp 關閉與Vi的相容模式
-" default no bomb for utf-8
+" default no bomb for utf-8 移除Bom
 set nobomb
 
 " expand TABs to spaces
