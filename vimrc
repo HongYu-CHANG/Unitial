@@ -1,8 +1,8 @@
 
 " charset
-set encoding=utf-8                   "enc, vim buffer charset, NOT the file's charset
-set fileencoding=utf-8               "fenc, default save charset
-"fencs, default opening charset priority (as auto detection)
+set encoding=utf-8                   "enc(encoding)內部的文字編碼, vim buffer charset, NOT the file's charset
+set fileencoding=utf-8               "fenc(fileencoding)當前打開的文件編碼, default save charset
+"fencs(fileencodings)這是一個字元編碼的列表, default opening charset priority (as auto detection)
 set fileencodings=utf-8,big5,gb2312,gb18030,gbk,default
 
 " enable features which are not Vi compatible but really really nice.
