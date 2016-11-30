@@ -6,8 +6,7 @@ set fileencoding=utf-8               "fenc(fileencoding)當前打開的文件編
 set fileencodings=utf-8,big5,gb2312,gb18030,gbk,default
 
 " enable features which are not Vi compatible but really really nice.
-set nocompatible  "nocp
-
+set nocompatible  "nocp 關閉與Vi的相容模式
 " default no bomb for utf-8
 set nobomb
 
