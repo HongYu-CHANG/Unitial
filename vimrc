@@ -55,13 +55,15 @@ set fileformats=unix,dos,mac "ffs
 set ttyfast "tf????
 
 " don't redrawnscreen  while executing macros, registers and other commands
-set lazyredraw "lz
+set lazyredraw 
+	"lz 對於慢終端(slow terminal)我們可以使用lazyredraw選項.他可以阻止Vim在重繪螢幕
 
 " enable window title
 set title
 
 " set windows title back to path instead of default 'Thanks for Flying Vim'
 let &titleold=getcwd()
+	"Adding this line to your vimrc will make Vim put the current working directory in the title
 
 " set statusbar
 set statusline+=%f              "filename
@@ -80,19 +82,22 @@ set statusline+=\ [%P]          "percent through file
 set statusline+=\ %a            "if open multiple files, show current file and and the number of all files
 
 " display a status line at the bottom of the window
-set laststatus=2 "ls
+set laststatus=2 
+	"ls 狀態欄有幾欄
 
 " show as much as possible of the last line, instead of '@' symbol
 set display+=lastline
+	"when I have a line that can not be entirely shown on screen, the line appears as an at symbol "@" all the way down to the bottom of the screen
 
 " set code folding feature
 set foldmethod=indent "fdm
 set foldnestmax=5     "fdn max fold level
 set foldlevel=5       "fdl default fold level
+	"簡單的說，就是可以將文章內容，依據他的結構，把多行內容集中於其中一個代表行來顯示，螢幕上只看得到章節標題那一代表行，這樣整個文章結構就一目了然，真正要閱讀其他內容時，再由簡單的按鍵或滑鼠來打開。"
 
 " set scroll offset(the min number of lines above and below cursor) to 2
 set scrolloff=2       "so
-
+	"捲動時保留2行"
 " enable mouse in all mode
 set mouse=a
 
@@ -101,9 +106,10 @@ set cursorline
 
 " highlight syntax
 syntax on
+	"Turn On or Off Color Syntax Highlighting In vi or vim Editor
 
 " color scheme
-colorscheme kolor
+colorscheme atom-dark-256
 
 " make whitespaces and TABs visible
 "l
