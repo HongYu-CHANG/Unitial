@@ -26,30 +26,33 @@ set autoindent
 	"ai 自動縮排
 
 " 256 color mode
-set t_Co=256
+set t_Co=256 
+	"設定 Vim 支援 256 色
 
-" show the ruler for the cursor
-set ruler  "ru
-" show line numbers
+set ruler  
+	"ru 是否顯示右下角一些狀態列說明
 set number "nu
+	" show line numbers
 
-" show the search results before stop typing
+"search relatived
 set incsearch     "is
-" highlight search results
+	" show the search results before stop typing 加強式尋找功能，在鍵入 patern 時會立即反應移動至目前鍵入之patern 上
 set hlsearch      "hls
-" case-insensitive search
+	" highlight search results
 set ignorecase    "ic
-" smart search (override 'ic' when pattern has uppers)
+	" case-insensitive search 不區分大小寫的搜尋
 set smartcase     "scs
+	" smart search (override 'ic' when pattern has uppers)
 
-" enable backspace in insert mode
 set backspace=2   "bs
+	" enable backspace in insert mode
 
 " file formats priority when try to read a file
-set fileformats=unix,dos,mac "ffs
+set fileformats=unix,dos,mac "ffs 
+	"可指定多個，會依載入的檔案形式來調整
 
 " indicates a fast terminal connection
-set ttyfast "tf
+set ttyfast "tf????
 
 " don't redrawnscreen  while executing macros, registers and other commands
 set lazyredraw "lz
