@@ -66,7 +66,7 @@ if [ $os = "FreeBSD" ];then
     ${ECHO} -e "\n#package mirror setting\nsetenv PACKAGEROOT http://ftp.tw.freebsd.org" >> ~/.tcshrc
 fi
 
-${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - Kolor from server...\n\e[0m";
+${ECHO} -e "\n\e[1;36;40mDownload VIM color scheme - atom-dark-256 from server...\n\e[0m";
 ${download_o} ~/.vim/colors/atom-dark-256.vim "$github_base"gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim
 ${ECHO} -e "\n\e[1;36;40mDownload git contrib - diff-highlight from server...\n\e[0m";
 ${download_o} ~/.git/contrib/diff-highlight "$github_base"git/git/master/contrib/diff-highlight/diff-highlight
