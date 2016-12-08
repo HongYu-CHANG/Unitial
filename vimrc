@@ -1,24 +1,29 @@
 
 " charset
-set encoding=utf-8                   "enc(encoding)內部的文字編碼, vim buffer charset, NOT the file's charset
-set fileencoding=utf-8               "fenc(fileencoding)當前打開的文件編碼, default save charset
-"fencs(fileencodings)這是一個字元編碼的列表, default opening charset priority (as auto detection)
-set fileencodings=utf-8,big5,gb2312,gb18030,gbk,default
+set encoding=utf-8          
+	"enc(encoding)內部的文字編碼, vim buffer charset, NOT the file's charset
+set fileencoding=utf-8      
+	"fenc(fileencoding)當前打開的文件編碼, default save charset
+set fileencodings=utf-8,big5,gb2312,gb18030,gbk,default  
+	"fencs(fileencodings)這是一個字元編碼的列表, default opening charset priority (as auto detection)
 
 " enable features which are not Vi compatible but really really nice.
-set nocompatible  "nocp 關閉與Vi的相容模式
-" default no bomb for utf-8 移除Bom
+set nocompatible  
+	"nocp 關閉與Vi的相容模式
 set nobomb
+	" default no bomb for utf-8 移除Bom
 
 " expand TABs to spaces
-set expandtab     "et
-" set TAB's width
-set tabstop=4     "ts
-" auto indent width
-set shiftwidth=4  "sw
+"set expandtab     
+	"et 將tab變成space
+"set tabstop=4     
+	" set TAB's width 用4個空白鍵取代 Tab
+set shiftwidth=4  
+	"sw 針對程式縮排所需要的 Space 個數
 
 " use the indent of the previous line for a newly created line
-set autoindent    "ai
+set autoindent    
+	"ai 自動縮排
 
 " 256 color mode
 set t_Co=256
