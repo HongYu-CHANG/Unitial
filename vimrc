@@ -109,7 +109,7 @@ syntax on
 	"Turn On or Off Color Syntax Highlighting In vi or vim Editor
 
 " color scheme
-colorscheme atom-dark-256
+colorscheme kolor
 
 " make whitespaces and TABs visible
 "l
