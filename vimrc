@@ -16,7 +16,7 @@ set nobomb
 " expand TABs to spaces
 "set expandtab     
 	"et 將tab變成space
-"set tabstop=4     
+set tabstop=4     
 	" set TAB's width 用4個空白鍵取代 Tab
 set shiftwidth=4  
 	"sw 針對程式縮排所需要的 Space 個數
